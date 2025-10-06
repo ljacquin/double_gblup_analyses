@@ -1,4 +1,4 @@
-[<img src="img/rice_pine.png" width="1000"/>]()
+[<img src="img/rice_pine.PNG" width="1000"/>]()
 
 # genomic prediction for GBLUP estimated breeding values (EBVs) associated to rice and pine traits
 

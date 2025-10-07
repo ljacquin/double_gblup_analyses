@@ -62,8 +62,7 @@ geno_df <- as.data.frame(fread(paste0(genom_dir_path, "genomic_data.csv")))
 colnames(geno_df)[1] <- "Genotype"
 geno_df$Genotype <- as.factor(geno_df$Genotype)
 
-# for each trait, compute gblups across all environments
-# for each genotype
+# get phenotypic data
 pheno_df <- as.data.frame(fread(paste0(pheno_dir_path_, "phenotype_data.csv")))
 pheno_df <- pheno_df[, vars_to_keep_]
 

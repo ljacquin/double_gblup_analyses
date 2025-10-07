@@ -77,7 +77,6 @@ names(list_gblup_ebv_per_geno) <- trait_names_
 geno_df <- as.data.frame(fread(paste0(genom_dir_path, "genomic_data.csv")))
 
 # for each trait, compute gblups across all environments
-# for each genotype
 for (file_ in files_names_spats_adj_pheno) {
   print(paste0("computation for file : ", file_))
 
@@ -88,7 +87,7 @@ for (file_ in files_names_spats_adj_pheno) {
   )])]
   trait_ <- colnames(df_)[str_detect(colnames(df_), "spats_adj_pheno")]
   # for isolated genotypes with single phenotypic values (i.e. non repeated),
-  # repeat their unique phenotypic values one time to make gblup computation
+  # repeat their unique phenotypic values one time to make blup computation
   # possible
   idx_non_repeat_geno <- which(table(df_$Genotype) < 2)
   if (length(idx_non_repeat_geno) > 0) {
@@ -138,7 +137,6 @@ for (file_ in files_names_spats_adj_pheno) {
     )
     gblup_ebv_df <- data.frame("Genotype" = geno_mat$V1, "Trait" = gblup_ebv)
     colnames(gblup_ebv_df)[2] <- str_remove(trait_, "_spats_adj_pheno")
-
 
     # add data frame to list
     list_gblup_ebv_per_geno[[

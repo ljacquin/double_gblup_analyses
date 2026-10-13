@@ -2,6 +2,8 @@
 
 # genomic prediction for GBLUP estimated breeding values (EBVs) associated to rice and pine traits
 
+[![DOI](https://zenodo.org/badge/1070585818.svg)](https://doi.org/10.5281/zenodo.23344483)
+
 ### 🎯 Objective
 
 This repository contains R scripts designed for reproducible data analysis and results, aligned with the FAIR principles. The scripts perform data reformatting and GBLUP EBVs computation to be used as phenotypes for genomic prediction.
